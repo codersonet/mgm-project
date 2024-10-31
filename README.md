@@ -9,7 +9,7 @@
 
 --> run pip install -r requirements.txt
 
---> run secret key generator script from app folder namely "secret.py", it will generate key, and put it in .env
+--> run secret key generator script from app folder namely "generate_key.py", it will generate key, and put it in .env
 
 --> starts with "python run.py"
 
