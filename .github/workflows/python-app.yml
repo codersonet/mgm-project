@@ -35,6 +35,10 @@ jobs:
       run: |
         pip install flake8 pytest  # Install linting and testing dependencies
 
+    - name: Lint with flake8
+      run: |
+        flake8 . --exit-zero  # Run flake8 on the entire project directory
+
     - name: Test with pytest
       run: |
         pytest  # Run pytest on the entire project directory
