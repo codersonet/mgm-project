@@ -1,3 +1,5 @@
+[![Python application](https://github.com/codersonet/mgm-project/actions/workflows/python-app.yml/badge.svg)](https://github.com/codersonet/mgm-project/actions/workflows/python-app.yml)
+
 ### HOW TO RUN PROGRAM
 ---
 
