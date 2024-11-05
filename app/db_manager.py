@@ -8,7 +8,7 @@ import csv
 def connect_to_db():
     """Connect to the MySQL database."""
     try:
-        conn = c.connect(host=config.HOST, user=config.USER, password=config.PASSWORD, database=config.DATABASE)
+        conn = c.connect(host=Config.HOST, user=Config.USER, password=Config.PASSWORD, database=Config.DATABASE)
         if conn.is_connected():
             print("Connected to MySQL database")
             return conn
