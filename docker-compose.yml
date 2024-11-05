@@ -1,1 +1,36 @@
+version: '3.8'
 
+services:
+  db:
+    image: mysql:8.0                       # MySQL 8.0 image
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}  # MySQL root password (for initial setup)
+      MYSQL_DATABASE: ${DATABASE}          # Database name (from .env)
+      MYSQL_USER: ${USER}                  # MySQL user (from .env)
+      MYSQL_PASSWORD: ${PASSWORD}          # MySQL password (from .env)
+    ports:
+      - "3306:3306"                        # Expose MySQL on default port 3306
+    volumes:
+      - db_data:/var/lib/mysql             # Volume to persist MySQL data
+
+  app:
+    build: .
+    container_name: python_app
+    command: python -m pytest              # Change to actual entrypoint command (e.g., `flask run`)
+    environment:
+      HOST: db                             # Points to db service within Docker network
+      USER: ${USER}
+      PASSWORD: ${PASSWORD}
+      DATABASE: ${DATABASE}
+      SECRET_KEY: ${SECRET_KEY}
+    depends_on:
+      - db                                 # Ensures db starts before app
+    volumes:
+      - .:/app                             # Mounts project directory into app container
+    ports:
+      - "5000:5000"                        # Expose app on port 5000 if needed
+
+volumes:
+  db_data:
+  
