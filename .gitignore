@@ -1,1 +1,41 @@
+# Python-related files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.sqlite3
 
+# Environment Variables
+.env
+*.env
+
+# Docker files
+docker-compose.override.yml
+db_data/
+*.log
+*.pid
+*.tar
+*.bak
+
+# Byte-compiled / optimized / DLL files
+*.egg-info/
+*.eggs/
+build/
+dist/
+*.so
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Pytest and test coverage files
+.pytest_cache/
+.tox/
+.coverage
+.cache/
+*.cover
+htmlcov/
+
+# VSCode
+.vscode/
