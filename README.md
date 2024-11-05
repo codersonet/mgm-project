@@ -3,15 +3,19 @@
 ### HOW TO RUN PROGRAM
 ---
 
---> run python -m venv venv
+--> `run python -m venv venv`
 
---> run .venv\Scripts\activate
+--> `run .venv\Scripts\activate`
 
---> run pip install python-dotenv
+--> `run pip install python-dotenv`
 
---> run pip install -r requirements.txt
+--> (if using docker) then, `docker-compose up --build`
+     to stop and clearn use, `docker-compose down`
 
---> run secret key generator script from app folder namely "generate_key.py", it will generate key, and put it in .env
+
+--> `run pip install -r requirements.txt`
+
+--> run secret key generator script from app folder namely "generate_key.py", it will generate key, and put it in `.env`
 
 --> starts with "python run.py"
 
